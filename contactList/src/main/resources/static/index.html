@@ -1,0 +1,72 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de contacto</title>
+    <link rel="stylesheet" type="text/css" href="contact-form.css">
+
+</head>
+
+
+<body>
+
+<!-- formulario de contacto en html y css -->
+
+<div class="contact_form">
+
+    <div class="formulario">
+        <h1>Registro de contacto</h1>
+
+
+
+        <form action="submeter-formulario.php" method="post">
+
+
+            <p>
+                <label for="nombre" class="colocar_nombre">Nombre
+                    <span class="obligatorio">*</span>
+                </label>
+                <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+            </p>
+
+            <p>
+                <label for="telefono" class="colocar_telefono">Teléfono
+                    <span class="obligatorio">*</span>
+                </label>
+                <input type="telefono" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+            </p>
+
+            <p>
+                <label for="email" class="colocar_email">Email
+                    <span class="obligatorio">*</span>
+                </label>
+                <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+            </p>
+
+            <p>
+                <label for="fecha" class="colocar_fecha">Fecha de nacimiento
+                    <span class="obligatorio">*</span>
+                </label>
+                <input type="fecha" name="introducir_fecha" id="fecha" placeholder="AAAA-MM-DD">
+            </p>
+
+
+
+            <button type="submit" name="enviar_formulario" id="enviar"><p>Registrar</p></button>
+
+            <p class="aviso">
+                <span class="obligatorio"> * </span>los campos son obligatorios.
+            </p>
+        </form>
+
+        <hr>
+        <button type="submit" name="obtenerLista" id="getList"><p>Lista de contactos</p></button>
+        <div id="contacts-container">
+
+        </div>
+
+
+    </div>
+</div>
+    <script src="app.js" charset="utf-8"></script>
+</body>
+</html>
